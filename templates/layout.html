@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/layout.css" />
+    <title>Layout Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    </div>
+
+    {% block body %} {% endblock %}
+
+    <!-- Footer  -->
+    <div class="footer">
+      <h1>
+        <center>
+          Created by Aayush Bhatta. Follow Aayush for more good stuffs.
+        </center>
+      </h1>
+    </div>
+  </body>
+</html>

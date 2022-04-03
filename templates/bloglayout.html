@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/bloglayout.css" />
+    <title>Bloglayout</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="/featured">Featured blogs</a>
+      <a href="/all">All blogs</a>
+      <a href="/feedback">Give Feedback</a>
+      <h3>Logged in as ...</h3>
+    </div>
+
+    {% block body %} {% endblock %}
+
+    <!-- Footer -->
+    <div class="footer">Can not be copied by other people!</div>
+  </body>
+</html>

@@ -1,6 +1,53 @@
 {% extends 'bloglayout.html' %}
 <!-- Extending bloglayout  -->
 
+{% block title_css %}
+<title>All blogs</title>
+<link rel="stylesheet" href="static/all.css" />
+{% endblock %}
+<!-- End of block  -->
+
 {% block body %}
-<h1>Hi, these are all of my blogs in this website that I have till now!</h1>
+
+<!-- Navbar  -->
+<div class="nav-bar">
+  <a href="/all">All Topics</a>
+  {% for topic in topics %}
+  <a href="/{{topic}}">{{topic}}</a>
+  {% endfor %}
+
+  <!-- Session  -->
+  {% if session %}
+  <p style="border: 2px solid green; padding: 5px">
+    logged in as {{ session['username'] }}
+  </p>
+  {% endif %}
+</div>
+
+<h1>Various Blogs</h1>
+
+<!-- Show no blogs are there  -->
+{% if not has_blog %}
+<h2>There is not any blogs writtten for this topic.</h2>
+{% endif %}
+
+<div class="my-blogs">
+  {% for blog in required_blog %}
+  <div class="one-blog">
+    <p><a href="/blog/{{ blog._id }}">{{ blog.topic }}</a></p>
+    <p>{{blog.description}}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- logout  -->
+{% if session %}
+<p>logged in as {{ session['username'] }}</p>
+<a href="/logout">Log Out</a>
+{% else %}
+<a href="/login">Log In</a>
+<a href="/signup">Sigh Up</a>
+{% endif %}
+
+<!-- end the block  -->
 {% endblock %}

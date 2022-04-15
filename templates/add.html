@@ -1,0 +1,56 @@
+{% extends 'bloglayout.html' %}
+<!-- Extending bloglayout.html  -->
+
+<!-- Title and css block  -->
+{% block title_css %}
+<title>Students list in School</title>
+<link rel="stylesheet" href="static/add.css" />
+{% endblock %}
+
+<!-- Block of body  -->
+{% block body %}
+<h1><span>Add blog</span></h1>
+
+<div class="form">
+  <form action="/new" method="POST">
+    <!-- Name of student  -->
+    <label for="">Name</label><br />
+    <input
+      type="text"
+      name="name"
+      placeholder="Name of Blogger"
+      autocomplete="off"
+    /><br /><br />
+
+    <!-- Topic of Blog  -->
+    <label for="">Topic</label><br />
+    <select name="topic">
+      {% for topic in topics %}
+      <option value="{{topic}}">{{ topic }}</option>
+      {% endfor %}</select
+    ><br /><br />
+
+    <!-- Classification of student  -->
+    <label for="">Topic</label><br />
+    <textarea
+      name="description"
+      id="description"
+      cols="30"
+      rows="10"
+      placeholder="Description of Blog"
+    ></textarea
+    ><br /><br />
+    <input type="submit" id="submit" />
+  </form>
+</div>
+
+<div class="students-home">
+  <h2><a href="/index">Home</a></h2>
+</div>
+
+{% if failed_attempts %}
+<h1>Fill all the informations :)</h1>
+{% endif %}
+
+<!-- Ending block  -->
+{% endblock %}

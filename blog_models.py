@@ -1,0 +1,7 @@
+# List of students for local database
+blog_topics = [
+        {"name":"Aayush Bhatta", "topic":"Personal Life", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate, placeat quod fugiat pariatur aut, quis nisi sit aliquid, eveniet maxime ratione necessitatibus odit! Excepturi, totam. Exercitationem est sedhic"},
+        {"name":"Sandesh Lamsal", "topic":"Science", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate, placeat quod fugiat pariatur aut, quis nisi sit aliquid, eveniet maxime ratione necessitatibus odit! Excepturi, totam. Exercitationem est sedhic"},
+        {"name":"Arun Giri", "topic":"Information and Technology", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate, placeat quod fugiat pariatur aut, quis nisi sit aliquid, eveniet maxime ratione necessitatibus odit! Excepturi, totam. Exercitationem est sedhic"},
+        {"name":"Dinesh Pandey", "topic":"Motivation", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate, placeat quod fugiat pariatur aut, quis nisi sit aliquid, eveniet maxime ratione necessitatibus odit! Excepturi, totam. Exercitationem est sedhic"}
+]

@@ -1,0 +1,32 @@
+{% extends 'bloglayout.html' %}
+<!-- Extending bloglayout  -->
+
+{% block title_css %}
+<title>Blog</title>
+{% endblock %}
+<!-- End of block  -->
+
+{% if session %}
+<p style="border: 2px solid green; padding: 5px">
+  logged in as {{ session['username'] }}
+</p>
+{% endif %}
+
+<!-- Start body  -->
+{% block body %}
+
+<h2>{{blog.topic}}</h2>
+<p>------------------</p>
+<p>{{blog.description}}</p>
+<p>------------------</p>
+<p>By {{blog.name}}</p>
+
+{% if blog.image %}
+<img src="{{ blog.image }}" alt="" />
+{% else %}
+<p><a href="/blog/{{ blog._id }}/add_image">Add and Image</a></p>
+{% endif %}
+
+<p><a href="/all">All Blogs</a></p>
+
+{% endblock %}

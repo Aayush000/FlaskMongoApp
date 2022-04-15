@@ -11,7 +11,9 @@ from flask_pymongo import PyMongo
 from model import topics
 from blog_models import blog_topics
 import bcrypt
-# from bson.objectid import ObjectId
+from bson.objectid import ObjectId
+import os 
+
 
 # Initialization section
 app = Flask(__name__)
@@ -21,6 +23,7 @@ app.config['MONGO_DBNAME'] = 'myblog'
 
 # URI of database
 app.config['MONGO_URI'] = "mongodb+srv://admin:OIERxhVZ2WPIJfdw@cluster0.phikc.mongodb.net/myblog?retryWrites=true&w=majority"
+# app.config['MONGO_URI'] = os.environ.get('my_url')
 
 # For using session object
 app.secret_key = secrets.token_urlsafe(16)

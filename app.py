@@ -22,9 +22,9 @@ app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'myblog'
 
 # URI of database
-app.config['MONGO_URI'] = "mongodb+srv://admin:OIERxhVZ2WPIJfdw@cluster0.phikc.mongodb.net/myblog?retryWrites=true&w=majority"
+# app.config['MONGO_URI'] = "mongodb+srv://admin:OIERxhVZ2WPIJfdw@cluster0.phikc.mongodb.net/myblog?retryWrites=true&w=majority"
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/visipedia_annotation_toolkit"
-# app.config['MONGO_URI'] = os.environ.get('my_url')
+app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
 
 # For using session object
 app.secret_key = secrets.token_urlsafe(16)

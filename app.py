@@ -38,10 +38,14 @@ mongo = PyMongo(app)
 
 # Routes Section
 
-@app.route("/")
-@app.route("/home")
+@app.route("/", methods=["GET", "POST"])
+@app.route("/home", methods=["GET", "POST"])
 def index():
-    return render_template('index.html')
+    if request.method == "GET":
+        return render_template('index.html')
+
+    result = "result"
+    return render_template("index.html", result=result)
 
 @app.route("/about")
 def about():
